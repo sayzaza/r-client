@@ -5,13 +5,14 @@ import { cityTemperature } from '@visx/mock-data';
 import { scaleLinear, scaleTime } from '@visx/scale';
 import { extent } from 'd3-array';
 import { curveMonotoneX } from '@visx/curve';
-import { AxisBottom } from '@visx/axis';
+import { AxisBottom, AxisLeft } from '@visx/axis';
 
 const Graph: React.FC = () => {
-	const width = 500;
-	const height = 300;
+	
 	const margin = { left: 50 };
 	const data = cityTemperature.slice(0, 8);
+	const width = 580;
+	const height = 300;
 	
 	// Define the graph dimensions
 	const xMax = width - margin.left;
@@ -23,14 +24,14 @@ const Graph: React.FC = () => {
 	const xScale = scaleTime({
 		range: [0, xMax],
 		domain: extent(data, getDate) as [Date, Date],
-		nice: true
-	})
+		nice: true,
+	});
 
 	const yScale = scaleLinear({
-		range: [0, xMax],
-		domain: extent(data, getDate) as [Date, Date],
-		nice: true
-	})
+		range: [yMax, 0],
+		domain: extent(data, getTemp) as [number, number],
+		nice: true,
+	});
 
 	return (
 		<div className="w-[580px]">
@@ -44,6 +45,19 @@ const Graph: React.FC = () => {
 						stroke='#6D717D'
 						strokeWidth={2}
 					/>
+					<AxisLeft
+            scale={yScale}
+            left={0}
+            strokeWidth={0}
+            numTicks={5}
+            tickFormat={(value) => `$${value}`}
+            tickLabelProps={() => ({
+              fill: '#6D717D',
+              fontSize: 10,
+              fontWeight: 500,
+              dx: -margin.left + 10,
+            })}
+          />
 					<AxisBottom
 						scale={xScale}
 						top={yMax}
