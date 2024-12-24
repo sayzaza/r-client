@@ -7,8 +7,8 @@ export enum PageName {
   wallet = 'Wallet',
   swap = 'Swap',
   earn = 'Earn',
-  transaction = 'Transacciones',
-  configuration = 'Configuración',
+  transaction = 'Transaction',
+  configuration = 'configuration',
 }
 
 export interface IAppBarProps {

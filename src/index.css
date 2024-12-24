@@ -4,9 +4,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,3 +14,214 @@ code {
     monospace;
 }
 
+/* Progress Bar */
+.progress-bar {
+  margin-top: 13vh;
+}
+
+/* Loading */
+.loading {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: block;
+  /* Hidden by default */
+  height: 100%;
+  /* Full height */
+  left: 0;
+  /* overflow: auto; */
+  position: fixed;
+  /* Stay in place */
+  top: 0;
+  width: 100%;
+  /* Full width */
+  z-index: 1000;
+  /* Sit on top */
+}
+
+.lds-roller {
+  display: inline-block;
+  height: 5rem;
+  left: 48%;
+  position: fixed;
+  top: 50%;
+  width: 5rem;
+  z-index: 100;
+}
+
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2d8cff;
+  margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@keyframes lds-roller {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.show-loading {
+  display: block !important;
+}
+
+.hide-loading {
+  display: none !important;
+}
+
+/* Register screen background */
+.register {
+  background-image: url('./assets/images/background.png');
+  background-size: cover;
+}
+
+/* Dropdown */
+.dropdown-usd::before {
+  content: '';
+  display: inline-block;
+  margin-right: 6px;
+  width: 22px;
+  height: 22px;
+  background-image: url('./assets/images/dollar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dropdown-usdt::before {
+  content: '';
+  display: inline-block;
+  margin-right: 4px;
+  width: 14px;
+  height: 14px;
+  background-image: url('./assets/images/usdt.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dropdown-btc::before {
+  content: '';
+  display: inline-block;
+  margin-right: 4px;
+  width: 14px;
+  height: 14px;
+  background-image: url('./assets/images/bitcoin.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dropdown-eth::before {
+  content: '';
+  display: inline-block;
+  margin-right: 4px;
+  width: 14px;
+  height: 14px;
+  background-image: url('./assets/images/ether.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Dropdown-option:hover {
+  background-color: rgb(169, 169, 199);
+}
+
+.Dropdown-option {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Dots background */
+.dots {
+  background-image: radial-gradient(circle closest-side at 30% 30%,#F2F2F2 80%,#fff 81%);
+  background-size: 5px 5px   
+}
+
+/* Remove arrow buttons from number input field */
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
