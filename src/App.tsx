@@ -7,6 +7,7 @@ import SignupPage from './pages/SignUp';
 import DashboardPage from './pages/Dashboard';
 import MyProfilePage from './pages/Configuration/MyProfilePage';
 import SecurityPage from './pages/Configuration/SecurityPage';
+import NotificationPage from './pages/Configuration/NotificationPage';
 import Loading from './components/Loading';
 
 const RootPage: React.FC = () => {
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <Route path='/dashboard' Component={DashboardPage}/>
         <Route path='/configuration/myprofile' Component={MyProfilePage}/>
         <Route path='/configuration/security' Component={SecurityPage} />
+        <Route path='/configuration/notification' Component={NotificationPage} />
       </Routes>
       <Loading />
     </BrowserRouter>
