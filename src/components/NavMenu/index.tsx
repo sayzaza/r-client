@@ -71,13 +71,13 @@ const NavMenu: React.FC<INavMenu> = ({ openNav, setOpenNav }) => {
             <div className="mr-5 w-5 h-5">
               <img src={TransactionImg} alt="Transaction" className="w-full h-full" />
             </div>
-            Transacciones
+            Transactions
           </Link>
           <Link to="/credit-card" className="flex items-center text-sm font-bold">
             <div className="mr-5 w-5 h-5">
               <img src={CreditImg} alt="Credit" className="w-full h-full" />
             </div>
-            Tarjeta
+            Card
           </Link>
         </div>
         <div className="text-[#6D717D]">
@@ -86,7 +86,7 @@ const NavMenu: React.FC<INavMenu> = ({ openNav, setOpenNav }) => {
             <div className="mr-5 w-5 h-5">
               <img src={BellImg} alt="Credit" className="w-full h-full" />
             </div>
-            Notificaciones
+            Notifications
             <span className="flex justify-center w-10 h-6 bg-[#773EE2] rounded-full items-center text-xs text-white font-semibold ml-7">
               10
             </span>
@@ -95,7 +95,7 @@ const NavMenu: React.FC<INavMenu> = ({ openNav, setOpenNav }) => {
             <div className="mr-5 w-5 h-5">
               <img src={SettingsImg} alt="Credit" className="w-full h-full" />
             </div>
-            Configuración
+            Configuration
           </Link>
         </div>
       </div>
@@ -105,13 +105,13 @@ const NavMenu: React.FC<INavMenu> = ({ openNav, setOpenNav }) => {
           <div className="mr-5 w-5 h-5">
             <img src={QuestionImg} alt="Credit" className="w-full h-full" />
           </div>
-          Soporte
+          Medium
         </Link>
         <Link to="/feedback" className="flex items-center text-sm font-bold">
           <div className="mr-5 w-5 h-5">
             <img src={ChatImg} alt="Credit" className="w-full h-full" />
           </div>
-          Enviar feedback
+          Send feedback
         </Link>
       </div>
     </div>

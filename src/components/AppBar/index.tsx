@@ -62,7 +62,7 @@ const AppBar: React.FC<IAppBarProps> = ({ pageName }) => {
           {pageName === PageName.earn && (
             <div className="absolute mt-2 flex items-center">
               <div className="bg-[#00FF6B] rounded-[10px] py-1 px-2.5 text-xs font-bold mr-1.5">+06.5%</div>
-              <p className="text-[#6D717D] text-[10px] font-medium w-32">en las últimas 24 horas</p>
+              <p className="text-[#6D717D] text-[10px] font-medium w-32">in the last 24 hours</p>
             </div>
           )}
         </div>
@@ -106,11 +106,11 @@ const AppBar: React.FC<IAppBarProps> = ({ pageName }) => {
         <div className="h-screen w-screen bg-black bg-opacity-25 fixed top-0 left-0 z-50">
           <div
             ref={modalRef}
-            className="px-3.5 pt-4 pb-8 w-80 border border border-[#EDEFF2] rounded-[20px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white"
+            className="px-3.5 pt-4 pb-8 w-80 border border-[#EDEFF2] rounded-[20px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white"
           >
-            <h1 className="text-xs font-semibold mb-[4px]">{walletAction === 'deposit' ? 'Depositar' : 'Retirar'}</h1>
+            <h1 className="text-xs font-semibold mb-[4px]">{walletAction === 'deposit' ? 'Deposit' : 'Withdraw'}</h1>
             <p className="text-[#6D717D] text-[9px] font-semibold mb-[14px]">
-              {walletAction === 'deposit' ? 'Selecciona como queres depositar' : 'Selecciona como queres retirar'}
+              {walletAction === 'deposit' ? 'Select how you want to deposit' : 'Select how you want to withdraw'}
             </p>
             <div
               className="flex items-center py-[18px] px-[15px] border border-[#EDEFF2] rounded-[20px] mb-[14px] cursor-pointer"
@@ -123,12 +123,12 @@ const AppBar: React.FC<IAppBarProps> = ({ pageName }) => {
               <img src={Earnings} alt="" className="w-[30px] h-auto shrink-0 mr-[15px]" />
               <div>
                 <h1 className="text-[12px] text-[#000000] font-semibold mb-[2px]">
-                  {walletAction === 'deposit' ? 'Despositar Crypto' : 'Retirar Crypto'}
+                  {walletAction === 'deposit' ? 'Desposit Crypto' : 'Withdraw Crypto'}
                 </h1>
                 <p className="text-[#6D717D] text-[9px] font-semibold">
                   {walletAction === 'deposit'
-                    ? 'Tengo criptomonedas que quiero transferir a Rely'
-                    : 'Tengo criptomonedas que quiero retirar a mi billetera'}
+                    ? 'I have cryptocurrencies that I want to transfer to Rely'
+                    : 'I have cryptocurrencies that I want to withdraw to my wallet'}
                 </p>
               </div>
             </div>
@@ -143,12 +143,12 @@ const AppBar: React.FC<IAppBarProps> = ({ pageName }) => {
               <img src={Wallet} alt="" className="w-[30px] h-auto shrink-0 mr-[15px]" />
               <div>
                 <h1 className="text-[12px] text-[#000000] font-semibold mb-[2px]">
-                  {walletAction === 'deposit' ? 'Despositar ARS' : 'Retirar ARS'}
+                  {walletAction === 'deposit' ? 'Desposit ARS' : 'Withdraw ARS'}
                 </h1>
                 <p className="text-[#6D717D] text-[9px] font-semibold">
                   {walletAction === 'deposit'
-                    ? 'Tengo pesos argentinos que quiero transferir a Rely'
-                    : 'Tengo pesos argentinos que quiero retirar a mi cuenta bancaria'}
+                    ? 'I have cryptocurrencies that I want to withdraw to my wallet'
+                    : 'I have Argentine pesos that I want to withdraw to my bank account'}
                 </p>
               </div>
             </div>
