@@ -49,13 +49,13 @@ const AppBar: React.FC<IAppBarProps> = ({ pageName }) => {
                 className="bg-[#773EE2] rounded text-white font-semibold text-[8px] px-5 py-1 mr-2 w-20"
                 onClick={handleDeposit}
               >
-                Depositar
+                Deposit
               </button>
               <button
                 className="bg-[#fff] border border-[#773EE2] rounded text-[#773EE2] font-semibold text-[8px] px-5 py-1 w-20"
                 onClick={handleWithdraw}
               >
-                Retirar
+                Withdraw
               </button>
             </div>
           )}

@@ -27,9 +27,9 @@ const Assets: React.FC = () => {
   return (
     <div className="w-full">
       <div className="flex justify-between items-center mb-5">
-        <h1 className="text-3xl font-semibold">Tus activos</h1>
+        <h1 className="text-3xl font-semibold">Your assets</h1>
         <p className="text-xs text-[#6D717D] font-medium flex items-center">
-          Ver todos
+          See all
           <FontAwesomeIcon icon={faAngleRight} className="ml-0.5 w-2 h-2" />
         </p>
       </div>
