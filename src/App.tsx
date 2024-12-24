@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import LoginPage from './pages/Login';
 import SignupPage from './pages/SignUp';
 import DashboardPage from './pages/Dashboard';
+import MyProfilePage from './pages/Configuration/MyProfilePage';
 import Loading from './components/Loading';
 
 const RootPage: React.FC = () => {
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Route path='/login' Component={LoginPage}/>
         <Route path='/signup' Component={SignupPage}/>
         <Route path='/dashboard' Component={DashboardPage}/>
+        <Route path='/configuration/myprofile' Component={MyProfilePage}/>
       </Routes>
       <Loading />
     </BrowserRouter>
