@@ -2,6 +2,8 @@ import React from 'react';
 import Balance from './Balance';
 import Graph from './Graph';
 import PiChart from './PiChart';
+import Assets from './Assets';
+import Earning from './Earning';
 
 const Dashboard: React.FC = () => {
 	return (
@@ -15,6 +17,14 @@ const Dashboard: React.FC = () => {
 					<PiChart />
 				</div>
 			</div>
+			<div className="grid grid-cols-12 xl:gap-20 mt-14">
+        <div className="xl:col-span-7 col-span-12">
+          <Assets />
+        </div>
+        <div className="xl:col-span-5 col-span-12">
+          <Earning />
+        </div>
+      </div>
 		</div>
 	)
 }
